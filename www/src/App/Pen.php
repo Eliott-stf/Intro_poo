@@ -11,7 +11,13 @@ class Pen
 {
     // Propriété: variable qui est membre d'une classe
     // C'est une caractèristique de l'objet crée
-    public string $color;
+    protected string $color;
+
+    //Méthode constructeur: appelée lorsqu'on instancie la classe
+    public function __construct(string $css_color = 'black' )
+    {
+        $this->color = $css_color;
+    }
 
     //Méthode: fonction qui est membre d'une classe
     // C'est une fonctionnalité de l'objet crée
@@ -31,7 +37,7 @@ class Pen
  */
         // echo incrémente le corps de la réponse HTTP avec la chaine donnée 
         /* echo $result; */
-        
+
         printf(
             '<span style ="color:%s">%s</span>',
             $this->color,
